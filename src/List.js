@@ -3,9 +3,6 @@ import React, {useEffect, useState} from 'react'
 function List() {
   const [list, setList] = useState([])
 
-  const show = React.createRef()
-
-
   useEffect(() => {
     fetchedData()
   }, [])
@@ -26,11 +23,6 @@ function List() {
     setList(filtered)
   }
 
-  const showList = (ref) => {
-    return () => {
-      ref.current.classList.toggle('showlist')
-    }
-  }
 
   return (
     <div className="container">
